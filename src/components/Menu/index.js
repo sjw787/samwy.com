@@ -1,6 +1,6 @@
-import './App.scss';
-import Home from './pages/Home'
-import Skills from './pages/Skills'
+import './Menu.scss';
+import Home from '../../pages/Home'
+import Skills from '../../pages/Skills'
 
 import {
   BrowserRouter,
@@ -9,7 +9,7 @@ import {
   Link
 } from "react-router-dom";
 
-function App() {
+function Menu() {
   return (
     <BrowserRouter>
       <div className="link-section">
@@ -21,12 +21,15 @@ function App() {
         </nav>
 
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="skills" element={<Skills />} />
+          <Link to="/">Home</Link> |{" "}
+          <Route index element={<Home/>}/>
         </Routes>
+
       </div>
     </BrowserRouter>
+
+
   );
 }
 
-export default App;
+export default Menu;
