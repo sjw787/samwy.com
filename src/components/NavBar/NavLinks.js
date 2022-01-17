@@ -4,6 +4,7 @@ import styled from "styled-components";
 const NavLinksContainer = styled.div`
   height: 100%;
   display: flex;
+  margin:0;
 `;
 
 const LinksWrapper = styled.ul`
@@ -27,7 +28,7 @@ const LinkItem = styled.li`
   transition: all 20ms ease-in-out;
 
   &:hover{
-    border-top: 2px solid #2ecc71;
+    border-top: 2px solid darkblue;
 
   }
 `;

@@ -8,8 +8,7 @@ import NavBar from "./components/NavBar";
 import {
   BrowserRouter,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 
@@ -36,8 +35,15 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="skills" element={<Skills />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
+
 
   // return (
   //   <BrowserRouter>
