@@ -36,6 +36,7 @@ const Link = styled.a`
   text-decoration: none;
   color: inherit;
   font-size: inherit;
+  padding: 18px 0;
 `;
 
 export function NavLinks(props){
@@ -43,13 +44,13 @@ export function NavLinks(props){
     <NavLinksContainer>
       <LinksWrapper>
         <LinkItem>
-          <Link href="#">Home</Link>
+          <Link href="/">Home</Link>
         </LinkItem>
         <LinkItem>
-          <Link href="#Skills">Skills</Link>
+          <Link href="/Skills">Skills</Link>
         </LinkItem>
         <LinkItem>
-          <Link href="#About">About</Link>
+          <Link href="/About">About</Link>
         </LinkItem>
       </LinksWrapper>
     </NavLinksContainer>

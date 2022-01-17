@@ -17,6 +17,13 @@ const LogoImg = styled.div`
   }
 `;
 
+const LogoLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  padding: 20px 0;
+`;
+
 const LogoText = styled.h2`
   font-size: 16px;
   margin 0;
@@ -32,9 +39,11 @@ export function Logo(props){
       <LogoImg>
         <img src={LogoImage} alt="samwy logo" />
       </LogoImg>
-      <LogoText>
-        Sam Wylock
-      </LogoText>
+      <LogoLink href="/">
+        <LogoText>
+          Sam Wylock
+        </LogoText>
+      </LogoLink>
     </LogoWrapper>
   );
 }
