@@ -33,8 +33,9 @@ const MiddleSection = styled.div`
 
 const RightSection = styled.div`
   display: flex;
+  padding-top: 3px;
+  padding-right: 10px;
   flex: 0.5;
-  float: right;
 `;
 
 export default function NavBar(props){

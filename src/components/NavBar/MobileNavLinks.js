@@ -1,5 +1,7 @@
 import React, { useState }  from "react";
+import './Menu.scss';
 import styled from "styled-components";
+import { CSSTransition } from 'react-transition-group';
 
 import { Accessibility } from "./Accessibility";
 import { MenuToggle } from "./MenuToggle";
@@ -12,15 +14,15 @@ const NavLinksContainer = styled.div`
 
 const LinksWrapper = styled.ul`
   margin: 0;
-  padding: 0;
+  padding: 15px 0;
   display: flex;
-  height: 100%;
+  height: auto;
   list-style: none;
   background-color: #fff;
   width: 100%;
   flex-direction: column;
   position: fixed;
-  top: 65px;
+  top: 60px;
   left: 0;
 `;
 
@@ -41,7 +43,7 @@ const Link = styled.a`
 `;
 
 const Margin = styled.div`
-  height: 2em;
+  height: 0.5em;
 
 `;
 
@@ -51,7 +53,13 @@ export function MobileNavLinks(props){
   return (
     <NavLinksContainer>
       <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
-      {isOpen && (
+      <CSSTransition
+        in={isOpen}
+        timeout={20}
+        classNames="display"
+        unmountOnExit
+        enter
+        exit>
         <LinksWrapper>
           <LinkItem>
             <Link href="/">Home</Link>
@@ -65,7 +73,7 @@ export function MobileNavLinks(props){
           <Margin />
           <Accessibility />
         </LinksWrapper>
-      )}
+      </CSSTransition>
     </NavLinksContainer>
   );
 }
